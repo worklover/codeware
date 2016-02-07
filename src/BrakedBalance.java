@@ -1,0 +1,18 @@
+
+public class BrakedBalance {
+    public static boolean isStringBalanced(String string){
+        int a = 0, b =0, c = 0;
+        int a1 = 0, b1 =0, c1 = 0;
+        for (int i=0; i<string.length(); i++) {
+          //  if ( string.charAt(i) =='[') {a=a+i+1; a1=a1+1;}
+            if ( string.charAt(i) =='(') {b=b+i+1; b1=b1+1;}
+          //  if ( string.charAt(i) =='{') {c=c+i+1; c1=c1+1;}
+          //  if ( string.charAt(i) ==']') {a=a-i-1; a1=a1-1;}
+            if ( string.charAt(i) ==')') {b=b-i-1; b1=b1-1;}
+          //  if ( string.charAt(i) =='}') {c=c-i-1; c1=c1-1;}
+        }
+        if ( (a <= 0) && (b <= 0) && (c <= 0) && (a1 == 0) && ( b1 == 0 ) && (c1 == 0)) return true;
+        else return false;
+    }
+
+}
