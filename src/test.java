@@ -1,14 +1,12 @@
-import static org.junit.Assert.assertArrayEquals;
+import java.awt.geom.Point2D;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class test {
-    SequenceSum sequenceSum = new SequenceSum();
 
-    @Test
-    public void testKnownValues() {
-        assertArrayEquals(new int[]{0, 1, 3, 6}, SequenceSum.sumOfN(3));
-        assertArrayEquals(new int[]{0, -1, -3, -6, -10}, SequenceSum.sumOfN(-4));
-        assertArrayEquals(new int[]{0, 1}, SequenceSum.sumOfN(1));
-        assertArrayEquals(new int[]{0}, SequenceSum.sumOfN(0));
+    @Test public void test_1() {
+        Point2D result = new CoordinatesInspector().coordinates(90.0,1.0);
+        assertEquals("Incorrect coordinates", new Point2D.Double(0.0,1.0), result);
     }
+
 }
